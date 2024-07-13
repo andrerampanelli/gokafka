@@ -7,7 +7,7 @@ Gokafka is a simple Kafka producer and consumer written in Go.
 ### Docker
 
 ```bash
-docker-compose up
+docker compose up
 ```
 
 ### Producer
@@ -27,29 +27,29 @@ go run cmd/consumer/main.go
 ### Create topic
 
 ```bash
-docker-compose exec gokafka-kafka-1 kafka-topics --create --bootstrap-server localhost:9092 --partitions 3 --topic test
+docker compose exec gokafka-kafka-1 kafka-topics --create --bootstrap-server localhost:9092 --partitions 3 --topic test
 ```
 
 ### List topics
 
 ```bash
-docker-compose exec gokafka-kafka-1 kafka-topics --list --bootstrap-server localhost:9092
+docker compose exec gokafka-kafka-1 kafka-topics --list --bootstrap-server localhost:9092
 ```
 
 ### Describe topic
 
 ```bash
-docker-compose exec gokafka-kafka-1 kafka-topics --describe --bootstrap-server localhost:9092 --topic test
+docker compose exec gokafka-kafka-1 kafka-topics --describe --bootstrap-server localhost:9092 --topic test
 ```
 
 ### Consume messages
 
 ```bash
-docker-compose exec gokafka-kafka-1 kafka-console-consumer --bootstrap-server localhost:9092 --topic test
+docker compose exec gokafka-kafka-1 kafka-console-consumer --bootstrap-server localhost:9092 --topic test
 ```
 
 ### Describe consumer group
 
 ```bash
-docker-compose exec gokafka-kafka-1 kafka-consumer-groups --bootstrap-server localhost:9092 --describe --group gokafka-group
+docker compose exec gokafka-kafka-1 kafka-consumer-groups --bootstrap-server localhost:9092 --describe --group gokafka-group
 ```
